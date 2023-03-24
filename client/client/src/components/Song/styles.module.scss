@@ -1,0 +1,142 @@
+.song_container {
+	width: fit-content;
+	// height: 6rem;
+	height: fit-content;
+	align-self: center;
+	// border-radius: 0.5rem;
+	border-radius: 5%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	// transform: translate(-50%,50%);
+	// top:50%;
+	// left:50%;
+
+	overflow: hidden;
+	//shadow
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	user-select: none;
+	//dragable part?
+
+	.filter_overlay{
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		display:none;
+	}
+
+	&:hover {
+		background-color: var(--light-black);
+	}
+
+	.song_img {
+		// width: 60rem;
+		// height: 60rem;
+		max-width: 35vw;
+		min-width: 10vw;
+		width: 50vmin;
+		height: 50vmin;
+		object-fit: cover;
+		// margin-right: 1rem;
+	}
+
+	.bottom_bar {
+		width: 100%;
+		height: 8vw;
+		background-color: rgba(0, 0, 0, 0.8);
+		overflow: hidden;
+		// opacity: 0.5;
+		position: absolute;
+		bottom: 0;
+
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+		flex-direction: column;
+		user-select: none;
+
+
+		p {
+			user-select: none;
+			text-align: center;
+			font-size: 2.8rem;
+			display: block;
+			width: 100%;
+			margin: 0;
+			-webkit-line-clamp: 1;
+			-webkit-box-orient: vertical;
+			display: -webkit-box;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+
+
+	}
+
+	.play_btn {
+		// margin: 0 0.5rem;
+
+		width: 10rem;
+		height: 10rem;
+		background-color: rgba(0, 0, 0, 0.3);
+		// opacity: 0.5;
+		transform: translate(-50%, -50%);
+		position: absolute;
+
+		top: 50%;
+		left:50%;
+
+
+		svg {
+			width: 10rem;
+			height: 10rem;
+			color: var(--white);
+		}
+	}
+
+	.left {
+		display: flex;
+		flex: 1;
+
+
+
+		img {
+			width: 4rem;
+			height: 4rem;
+			object-fit: cover;
+		}
+
+		p {
+			font-size: 1.4rem;
+			font-weight: 500;
+			margin-left: 1rem;
+			-webkit-line-clamp: 1;
+			-webkit-box-orient: vertical;
+			display: -webkit-box;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+	}
+
+	.right {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		position: relative;
+		flex: 1;
+
+		p {
+			margin: 0 0.5rem 0 1rem;
+			font-size: 1.2rem;
+		}
+
+		.menu_btn {
+			svg {
+				width: 2rem;
+				height: 2rem;
+				color: var(--white);
+			}
+		}
+	}
+}

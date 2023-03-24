@@ -1,0 +1,120 @@
+.container {
+	width: calc(100vw - 40rem);
+	height: 100vh;
+	background-color: #173f4b;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 0 20rem;
+	overflow: hidden;
+
+
+	.left {
+		width: 30%;
+		padding: 6rem;
+        background: rgba(126, 121, 121, 0.42);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5.9px);
+        -webkit-backdrop-filter: blur(5.9px);
+        border: 1px solid rgba(126, 121, 121, 0.61);
+
+		.main {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			color: #fff;
+
+
+			h1 {
+				display: flex;
+				justify-content: space-between;
+				color: #fff;
+				font-size: 2rem;
+				letter-spacing: -0.01em;
+				font-weight: 900;
+				margin: 0;
+				padding-bottom: 1rem;
+			}
+			h2{
+				display: flex;
+				justify-content: space-between;
+				color: #fff;
+				font-size: 2rem;
+				letter-spacing: -0.01em;
+				font-weight: 900;
+				margin: 0;
+				padding-bottom: 1rem;
+
+			}
+
+			p {
+				color: aliceblue;
+				font-size: 1.8rem;
+				font-weight: 400;
+				margin: 0;
+				padding-bottom: 2rem;
+			}
+
+			span {
+				margin: auto;
+				display: flex;
+				color: #fff;
+				background-color: black;
+				justify-content: center;
+				width: 40%;
+				padding: 2rem;
+				font-size: 1.4rem;
+				font-weight: 700;
+				text-transform: uppercase;
+				border-radius: 1rem;
+				letter-spacing: 0.2em;
+				cursor: pointer;
+
+				&:hover {
+					color: #616467;
+				}
+			}
+		}
+	}
+
+	.right {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+		flex: 1;
+
+		.record {
+			transition: all ease 4s;
+			-webkit-animation: spin 4s linear infinite;
+			-moz-animation: spin 4s linear infinite;
+			animation: spin 4s linear infinite;
+
+			@-moz-keyframes spin {
+				100% {
+					-moz-transform: rotate(360deg);
+				}
+			}
+
+			@-webkit-keyframes spin {
+				100% {
+					-webkit-transform: rotate(360deg);
+				}
+			}
+
+			@keyframes spin {
+				100% {
+					-webkit-transform: rotate(360deg);
+					transform: rotate(360deg);
+				}
+			}
+		}
+
+		.record_arm {
+			position: absolute;
+			left: 50%;
+		}
+	}
+}

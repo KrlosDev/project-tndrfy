@@ -1,0 +1,17 @@
+//getting songs from db
+export const LOADING_GET_SONGS = 'LOADING_GET_SONGS';
+export const SUCCESS_GET_SONGS = 'SUCCESS_GET_SONGS';
+export const FAILURE_GET_SONGS = 'FAILURE_GET_SONGS';
+
+
+//getting songs from db
+export const LOADING_GET_NEXT_RANDOM_SONG = 'LOADING_GET_NEXT_RANDOM_SONG';
+export const SUCCESS_GET_NEXT_RANDOM_SONG = 'SUCCESS_GET_NEXT_RANDOM_SONG';
+export const FAILURE_GET_NEXT_RANDOM_SONG = 'FAILURE_GET_NEXT_RANDOM_SONG';
+
+export const LOADING_SONG_DATA = 'LOADING_SONG_DATA';
+export const SET_SONG_DATA = 'SET_SONG_DATA';
+export const CLEAR_SONG_DATA = 'CLEAR_SONG_DATA';
+
+export const PLAY_SONG = 'PLAY_SONG';
+export const PAUSE_SONG = 'PAUSE_SONG';

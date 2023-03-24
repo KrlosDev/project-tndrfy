@@ -1,0 +1,251 @@
+.container {
+	height: 6rem;
+	width: calc(100% - 28rem);
+	//background: linear-gradient(149.46deg, #01012b, #d1f7ff 99.16%);
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 2rem 0 26rem;
+	z-index: 99;
+	background: rgba(13, 159, 195, 0.656);
+	box-shadow: 0px 3px 25px 0px rgba(112, 112, 112, 0.61) inset;
+	-webkit-box-shadow: 0px 3px 25px 0px rgba(112, 112, 112, 0.61) inset;
+	-moz-box-shadow: 0px 3px 25px 0px rgba(112, 112, 112, 0.61) inset;
+
+
+	.left {
+		display: flex;
+
+		.icon {
+			margin-left: 2rem;
+			cursor: pointer;
+
+			svg {
+				background-color: var(--light-black);
+				color: var(--white);
+				padding: 0.5rem;
+				width: 1.8rem;
+				height: 1.8rem;
+				border-radius: 50%;
+			}
+		}
+	}
+
+	.right {
+		display: flex;
+		width: 100%;
+		justify-content: flex-end;
+
+		.profile_menu {
+
+			display: flex;
+			align-items: center;
+			padding: 0.5rem;
+			color: var(--white);
+			border-radius: 2rem;
+			cursor: pointer;
+
+			&:hover {
+				background-color: var(--light-black);
+			}
+
+			svg {
+				width: 2.5rem;
+				height: 2.5rem;
+			}
+
+			p {
+				font-size: 1.4rem;
+				font-weight: 600;
+				margin: 0 0.6rem;
+
+			}
+
+			svg {
+				width: 2.5rem;
+				height: 2.5rem;
+			}
+		}
+
+
+		button {
+			display: flex;
+			align-items: center;
+			padding: 0.8rem;
+
+			border-radius: 2rem;
+			color: #fff;
+			background: rgb(18, 18, 18);
+			box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+			backdrop-filter: blur(5.4px);
+			-webkit-backdrop-filter: blur(5.4px);
+			cursor: pointer;
+
+			&:hover {
+				background-color: var(--light-black);
+			}
+
+			p {
+				font-size: 1.5rem;
+				font-weight: 600;
+				margin: 0 0.6rem;
+			}
+
+
+
+		}
+	}
+
+	.menu {
+		width: 20rem;
+		position: absolute;
+		padding: 0.5rem;
+		top: 5.4rem;
+		right: 2rem;
+		border-radius: 0.5rem;
+		background-color: var(--light-black);
+		z-index: 100;
+
+		.options {
+			color: var(--white);
+			padding: 1rem;
+			border-radius: 0.2rem;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			cursor: pointer;
+
+			p {
+				margin: 0;
+				font-size: 1.2rem;
+				font-weight: 500;
+			}
+
+			svg {
+				width: 1.6rem;
+				height: 1.6rem;
+			}
+
+			&:hover {
+				background-color: var(--light-white);
+			}
+		}
+	}
+}
+// h1,h2,h3,h4,h5,h6, p, span, a {
+// 	font-weight: normal!important;
+// 	font-family: 'Roboto', sans-serif;
+// }
+p{
+	margin:0;
+}
+.modal_body{
+	color:white;
+	text-align: left;
+	font-size: 1.5rem;
+	.button_container{
+		width: 100%;
+		display:flex;
+		justify-content: center;
+		align-items: center;
+		.modal_button{
+			font-size: 2rem;
+			text-align: center;
+		}
+	}
+	.modal_body_title{
+		font-size: 2.5rem;
+		font-weight: bold;
+		text-align: center;
+	}
+	.modal_subtitle{
+		font-size: 1.8rem;
+		font-weight: bold;
+		text-align: center;
+	}
+}
+
+.modal_header{
+	text-align: center;
+	color:white;
+	font-size: 3rem;
+}
+@mixin keyframes($name){
+    @keyframes #{$name}{
+        @content;
+    }
+}
+@mixin animate($animation, $duration, $timingFunction, $delay, $iterationCount, $direction, $fillMode, $playState){
+    // animation: $animation $duration $method $times;
+	animation: $animation $duration $timingFunction $delay $iterationCount $direction $fillMode $playState;
+	// animation: name duration timing-function delay iteration-count direction fill-mode play-state;
+}
+.tutorial_modal{
+	width: 100%;
+	height: 100%;
+	z-index: 9000;
+	// background:none;
+	position:fixed;
+
+	.card{
+		background: white;
+		width: 15%;
+		height: 15%;
+		box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.2);
+	
+		border-radius: 5%;	
+		position: absolute;
+		left: calc(50% );
+		top: calc(50% );
+		transform: translate(-50%,-50%);
+
+		max-width: 35vw;
+		min-width: 10vw;
+		width: 50vmin;
+		height: 50vmin;
+		// object-fit: cover;
+		position: relative;
+		.back_icon{
+			color:rgba(255,0,0,0.8);
+			position:absolute;
+			top:50%;
+			// left:-10rem;
+			transform: translate(-120%,-50%);
+			font-size:10rem;
+			animation: left;
+			@include keyframes(left){
+				0%{ 
+					transform: translate(-120%,-50%);
+				}
+				100%{ 
+					transform: translate(-60%,-50%);
+				}
+			}
+			@include animate(left, 1s, ease-in-out, 0s, infinite, both, forwards, running);
+			}
+		.forward_icon{
+			color:rgba(10, 184, 10, 0.8);
+			position:absolute;
+			top:50%;
+			// right:;
+			right: 0;
+			transform: translate(120%,-50%);
+			font-size:10rem;
+			animation: right;
+
+			@include keyframes(right){
+				0%{ 
+					transform: translate(120%,-50%);
+				}
+				100%{ 
+					transform: translate(60%,-50%);
+				}
+			}
+			// @include animate(right, 1s, linear, 1);
+			@include animate(right, 1s, ease-in-out, 0s, infinite, both, forwards, running);
+			}
+		}
+}
